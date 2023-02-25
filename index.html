@@ -1,47 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Results summary component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- fonts -->
 
-  Your Result
-  76
-  of 100
+    <!-- css links -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
+    <title>Frontend Mentor | Results summary component</title>
 
-  Reaction
-  80 / 100
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <section class="card__container--layout-result">
+        <p class="card__text">Your Result</p>
+        <div class="card__container--score">
+          <span class="card__score">76</span>
+          <span class="card__denom">of 100</span>
+        </div>
+        <h1 class="card__title">Great</h1>
+        <p class="card__paragraph">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </section>
 
-  Memory
-  92 / 100
+      <section class="card__container--layout-summary">
+        <h2 class="card__title--summary">Summary</h2>
 
-  Verbal
-  61 / 100
+        <div class="card__items">
+          <div class="card__container--cognition">
+            <h3 class="card__title--reaction">Reaction</h3>
+            <span class="card__score">80 / 100</span>
+          </div>
+          <div class="card__container--cognition">
+            <h3 class="card__title--memory">Memory</h3>
+            <span class="card__score">92 / 100</span>
+          </div>
+          <div class="card__container--cognition">
+            <h3 class="card__title--verbal">Verbal</h3>
+            <span class="card__score">61 / 100</span>
+          </div>
+          <div class="card__container--cognition">
+            <h3 class="card__title--visual">Visual</h3>
+            <span class="card__score">72 / 100</span>
+          </div>
+          <a href="" class="card__button">Continue</a>
+        </div>
+      </section>
+    </main>
 
-  Visual
-  72 / 100
-
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
+  </body>
 </html>
