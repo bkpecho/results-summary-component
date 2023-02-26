@@ -141,17 +141,17 @@ body {
     border-radius: 0.5rem;
     padding: 1.25rem 1rem;
 
-    &.--reaction {
+    &--reaction {
       background-color: rgba($light-red, 0.1);
     }
-    &.--memory {
+    &--memory {
       font-weight: $fw-bold;
       background-color: rgba($orangey-yellow, 0.1);
     }
-    &.--verbal {
+    &--verbal {
       background-color: rgba($green-teal, 0.1);
     }
-    &.--visual {
+    &--visual {
       background-color: rgba($cobalt-blue, 0.1);
     }
   }
@@ -217,7 +217,7 @@ body {
   }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .card {
     flex-direction: row;
     align-items: stretch;

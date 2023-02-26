@@ -87,17 +87,17 @@ body {
   border-radius: 0.5rem;
   padding: 1.25rem 1rem;
 }
-.card__wrapper.--reaction {
+.card__wrapper--reaction {
   background-color: rgba(255, 87, 87, 0.1);
 }
-.card__wrapper.--memory {
+.card__wrapper--memory {
   font-weight: 700;
   background-color: rgba(255, 176, 31, 0.1);
 }
-.card__wrapper.--verbal {
+.card__wrapper--verbal {
   background-color: rgba(0, 189, 145, 0.1);
 }
-.card__wrapper.--visual {
+.card__wrapper--visual {
   background-color: rgba(17, 37, 212, 0.1);
 }
 .card__title--reaction {
@@ -158,7 +158,7 @@ body {
   background-color: rgba(85, 60, 246, 0.8);
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .card {
     flex-direction: row;
     align-items: stretch;
