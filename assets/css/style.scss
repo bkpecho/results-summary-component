@@ -12,13 +12,11 @@ $cobalt-blue: hsl(234, 85%, 45%);
 // ## Gradients
 
 // BACKGROUND
-$light-slate-blue: hsl(252, 100%, 67%);
-$light-royal-blue: hsl(241, 81%, 54%);
+$bg-primary: hsl(248, 91%, 60%);
 //
 
 // CIRCLE
-$violet-blue: hsla(256, 72%, 46%, 1);
-$persian-blue: hsla(241, 72%, 46%, 0);
+$bg-circle: hsl(255, 71%, 46%);
 //
 
 // ### Neutral
@@ -59,7 +57,210 @@ html {
 
 body {
   @include flex(column, 0);
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
 
-  border: solid red;
+  background-color: $pale-blue;
+}
+
+.card {
+  @include flex(column, 0);
+  background-color: white;
+  //results
+
+  &__container--result {
+    @include flex(column, 1rem);
+    align-items: center;
+    text-align: center;
+
+    background-color: $bg-primary;
+    color: $white;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+
+    padding: 2rem;
+  }
+
+  &__text {
+    color: rgba($white, 0.7);
+    font-weight: $fw-bold;
+  }
+
+  &__group--score {
+    @include flex(column, 1rem);
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient($bg-circle, rgba($bg-circle, 0));
+
+    height: 145px;
+    width: 145px;
+    border-radius: 50%;
+  }
+
+  &__score {
+    font-size: 3rem;
+    font-weight: $fw-extra;
+  }
+
+  &__denom {
+    color: rgba($white, 0.5);
+    font-weight: $fw-bold;
+  }
+
+  &__result {
+    font-size: 1.5rem;
+    font-weight: $fw-bold;
+  }
+
+  &__paragraph {
+    color: rgba($white, 0.7);
+    line-height: 1.5rem;
+  }
+
+  // summary
+
+  &__container--summary {
+    @include flex(column, 1rem);
+
+    padding: 1.5rem;
+    font-weight: $fw-bold;
+    background-color: $white;
+  }
+
+  &__title {
+    color: $dark-gray-blue;
+    font-size: 1.18rem;
+
+    margin-bottom: 1rem;
+  }
+
+  &__wrapper {
+    @include flex(row, 0);
+    justify-content: space-between;
+    border-radius: 0.5rem;
+    padding: 1.25rem 1rem;
+
+    &.--reaction {
+      background-color: rgba($light-red, 0.1);
+    }
+    &.--memory {
+      font-weight: $fw-bold;
+      background-color: rgba($orangey-yellow, 0.1);
+    }
+    &.--verbal {
+      background-color: rgba($green-teal, 0.1);
+    }
+    &.--visual {
+      background-color: rgba($cobalt-blue, 0.1);
+    }
+  }
+
+  &__title--reaction {
+    @include flex(row, 1rem);
+    color: $light-red;
+
+    &::before {
+      content: url(/assets/images/icon-reaction.svg);
+    }
+  }
+  &__title--memory {
+    @include flex(row, 1rem);
+    color: $orangey-yellow;
+
+    &::before {
+      content: url(/assets/images/icon-memory.svg);
+    }
+  }
+  &__title--verbal {
+    @include flex(row, 1rem);
+    color: $green-teal;
+
+    &::before {
+      content: url(/assets/images/icon-verbal.svg);
+    }
+  }
+  &__title--visual {
+    @include flex(row, 1rem);
+    color: $cobalt-blue;
+
+    &::before {
+      content: url(/assets/images/icon-visual.svg);
+    }
+  }
+
+  &__item-score {
+    color: $dark-gray-blue;
+
+    & .--gray {
+      color: rgba($dark-gray-blue, 0.5);
+    }
+  }
+
+  &__button {
+    text-decoration: none;
+    text-align: center;
+    padding: 1.25rem 1rem;
+    background-color: $dark-gray-blue;
+    color: $white;
+
+    margin-top: 0.5rem;
+    border-radius: 5rem;
+
+    &:hover {
+      background-color: $bg-primary;
+    }
+
+    &:active {
+      background-color: rgba($bg-primary, 0.8);
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .card {
+    flex-direction: row;
+    align-items: stretch;
+    border-radius: 2rem;
+    overflow: hidden;
+
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0.5rem 0.5rem 2rem 0.1rem rgba($light-lavender, 0.8);
+
+    &__container--result {
+      border-radius: 2rem;
+      justify-content: center;
+      gap: 1.5rem;
+
+      padding: 2rem 3.5rem !important;
+    }
+
+    &__container--result,
+    &__container--summary {
+      width: 375px;
+    }
+
+    &__text {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &__group--score {
+      gap: 0.5rem;
+      height: 200px;
+      width: 200px;
+    }
+
+    &__score {
+      font-size: 4rem;
+    }
+
+    &__result {
+      font-size: 1.75rem;
+    }
+
+    &__title {
+      font-size: 1.25rem;
+    }
+  }
 }
