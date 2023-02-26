@@ -27,3 +27,39 @@ $white: hsl(0, 0%, 100%);
 $pale-blue: hsl(221, 100%, 96%);
 $light-lavender: hsl(241, 100%, 89%);
 $dark-gray-blue: hsl(224, 30%, 27%);
+
+// ### Body Copy
+
+$fs-base: 18px;
+
+// ### Font
+
+$ff-primary: 'Hanken Grotesk', sans-serif;
+
+$fw-regular: 500;
+$fw-bold: 700;
+$fw-extra: 800;
+
+// MIXINS
+
+@mixin flex($direction, $gap) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+* {
+  font-family: $ff-primary;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $fs-base;
+}
+
+body {
+  @include flex(column, 0);
+  min-height: 100vh;
+
+  border: solid red;
+}

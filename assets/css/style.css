@@ -1,1 +1,32 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  font-family: "Hanken Grotesk", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-height: 100vh;
+  border: solid red;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.card__container--layout-result {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background-color: hsl(241, 81%, 54%);
+  color: hsl(0, 0%, 100%);
+  padding: 2rem;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}/*# sourceMappingURL=style.css.map */
